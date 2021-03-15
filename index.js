@@ -3,8 +3,8 @@ const PDFDocument = require("./lib/dpfkit-updated");
 const size = require("./lib/size");
 
 const person = require("./data/persons/person-john-doe.json");
-const template = require("./data/templates/template-noto.json");
-// const template = require("./data/templates/template-helvetica.json");
+const template = require("./data/templates/template-helvetica.json");
+// const template = require("./data/templates/template-noto.json");
 
 const shortPersonName = person.name.replace(/\s/g, "");
 const shortTarget = person.target.replace(/\s/g, "-");
