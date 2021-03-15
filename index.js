@@ -6,9 +6,9 @@ const person = require("./data/persons/person-john-doe.json");
 const template = require("./data/templates/template-noto.json");
 // const template = require("./data/templates/template-helvetica.json");
 
-const tightPersonName = person.name.replace(/\s/g, "");
-const tightTarget = person.target.replace(/\s/g, "-");
-const filename = `${tightPersonName}-${tightTarget}.pdf`;
+const shortPersonName = person.name.replace(/\s/g, "");
+const shortTarget = person.target.replace(/\s/g, "-");
+const filename = `${shortPersonName}-${shortTarget}.pdf`;
 
 const doc = new PDFDocument({
   size: template.size,
