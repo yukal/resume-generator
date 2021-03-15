@@ -1,0 +1,64 @@
+{
+  "size": "A4",
+  "layout": "portrait",
+  "metrics": {
+    "DOC_WIDTH": 595.28,
+    "DOC_HEIGHT": 841.89,
+    "rowLegendTop": 14,
+    "leftMargin": 12,
+    "rightMargin": 12,
+    "topMargin": 28,
+    "bottomMargin": 16,
+    "columnsGap": 6,
+    "leftColumn": {
+      "width": 90
+    }
+  },
+  "fontAccent": "",
+  "fontBold": "Helvetica-Bold",
+  "fontNorm": "Helvetica",
+  "lineHeight": 1.8,
+  "leftColumnBg": "#f3f3f3",
+  "data": {
+    "listOffset": {
+      "min": 1.6,
+      "max": 6
+    },
+    "avatar": {
+      "width": 40,
+      "positionY": 145
+    },
+    "linkColor": "#003398",
+    "primaryColor": "black",
+    "secondaryColor": "#202020",
+    "contacts": {
+      "positionY": 102,
+      "fontSize": 12.5
+    },
+    "skills": {
+      "positionY": 134,
+      "fontSize": 12.5
+    },
+    "personName": {
+      "fontSize": 21,
+      "fontWeight": "regular",
+      "fontColor": "black"
+    },
+    "personPosition": {
+      "marginTop": 1,
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "fontColor": "black"
+    },
+    "textProjects": {
+      "text": "The Projects",
+      "fontColor": "#202020",
+      "fontSize": 12.5
+    },
+    "textDefault": {
+      "fontSize": 12.5,
+      "fontWeight": "regular",
+      "fontColor": "#202020"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "resume-generator",
+  "version": "1.0.0",
+  "description": "resume generator",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "resume",
+    "resume generator",
+    "pdf generator"
+  ],
+  "author": "Alexander Yukal <yukal.alexander@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fontkit": "^1.8.1",
+    "pdfkit": "^0.11.0"
+  }
+}

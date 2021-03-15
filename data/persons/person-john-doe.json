@@ -1,0 +1,109 @@
+{
+  "birth": "Greece, Macedonia, July 21st, 1885",
+  "name": "John Doe",
+  "position": "Middle Node.js Developer",
+  "target": "Middle Nodejs",
+  "photo": "data/ava/ava-1.png",
+  "contacts": [
+    {
+      "name": "Github",
+      "link": "github.com/johndoe",
+      "url": "https://github.com/johndoe"
+    },
+    {
+      "name": "Linkedin",
+      "link": "linkedin.com/in/johndoe",
+      "url": "https://www.linkedin.com/in/johndoe"
+    },
+    {
+      "name": "Email",
+      "link": "john.doe@email.it",
+      "url": "mailto:john.doe@email.it"
+    }
+  ],
+  "skills": [
+    "Node.js",
+    "PHP",
+    "Nest.js",
+    "Jest",
+    "TDD",
+    "MySQL",
+    "PostgreSQL",
+    "Firebase"
+  ],
+  "extraSkills": ["Git", "Docker", "Linux", "Bash"],
+  "education": [
+    "National Technical University – Information Technologies and Computer Engineering"
+  ],
+  "courses": ["The DAO of project management. Course for the beginners."],
+  "english": "intermediate",
+  "projects": [
+    {
+      "name": "Badabum",
+      "year": "2021",
+      "tech": [
+        "Node.js",
+        "Nest.js",
+        "TypeScript",
+        "TypeORM",
+        "GraphQL",
+        "PostgreSQL",
+        "Jest",
+        "Docker",
+        "Git",
+        "DDD",
+        "TDD"
+      ],
+      "description": "Support of a ready-made solution based on Nest.js framework and TDD/DDD approach. Implementing new features and test coverage. Writing of pure Node.js code for importing structured relational data with over ~25 million records into DB."
+    },
+    {
+      "name": "Babetta",
+      "year": "2019",
+      "tech": [
+        "Node.js",
+        "Express",
+        "Passport",
+        "JWT",
+        "REST",
+        "Firebase",
+        "Git"
+      ],
+      "description": "Development of an API interface for the 3rd parties usage. Serving the user data using of login account system and NoSQL database structuring. Implementing of test modules."
+    },
+    {
+      "name": "Mongotech",
+      "year": "2019",
+      "tech": ["Node.js", "Mongo", "Git", "Hubspot"],
+      "description": "The partial data synchronization to an external API using the Hubspot service as a CRM system for Endotech call-center."
+    },
+    {
+      "name": "Gotawa",
+      "year": "2019",
+      "tech": [
+        "JS",
+        "PHP",
+        "Codeigniter",
+        "MySQL",
+        "Bootstrap",
+        "SVN",
+        "UI/UX"
+      ],
+      "description": "Development of a real estate web service in San Francisco. Implementing the UI/UX interface for both Seller and Buyer users."
+    },
+    {
+      "name": "THEDOOR",
+      "year": "2016",
+      "tech": ["Gulp", "SCSS", "CSS3", "jQuery", "Bootstrap"],
+      "description": "Development of an adaptive HTML–template using the SCSS–preprocessor. Development of branding and logotype of the company."
+    },
+    {
+      "name": "asteroads",
+      "year": "2015-17",
+      "tech": ["PHP", "Yii2", "Codeigniter", "ExtJS", "JS", "MySQL"],
+      "description": "Development and support of CRM systems Implementing cash flow analysis functionality and backoffice CRUD interfaces for different types users, both frontend, and backend."
+    }
+  ],
+  "meta": {
+    "version": "4.2"
+  }
+}
