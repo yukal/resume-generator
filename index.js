@@ -2,8 +2,16 @@ const fs = require("fs");
 const PDFDocument = require("./lib/dpfkit-updated");
 const size = require("./lib/size");
 
+// Example: Person 1
 const person = require("./data/persons/person-john-doe.json");
 const template = require("./data/templates/template-helvetica.json");
+
+// Example: Person 2
+// const person = require("./data/persons/person-rita-fluffy.json");
+// const template = require("./data/templates/template-carlito.json");
+
+// Example: Person 3
+// const person = require("./data/persons/person-lion-king.json");
 // const template = require("./data/templates/template-noto.json");
 
 const shortPersonName = person.name.replace(/\s/g, "");
@@ -157,20 +165,47 @@ doc.lineGap(template.lineHeight);
 // ...................................................................
 // AVATAR
 {
+  const { photo } = person;
   const { avatar } = template.data;
-  const AVA_WIDTH = size.mm.toPoints(avatar.width);
-  const AVA_POS_Y = avatar.positionY;
-  const AVA_RADIUS = AVA_WIDTH / 2;
+
+  const fitSize = size.mm.toPoints(avatar.fitSize);
+
+  let ratio = 1;
+  let imgWidth = fitSize;
+  let imgHeight = fitSize;
+  let orientation = "square";
+
+  let imgX = FRAME_X1;
+  let imgY = avatar.positionY;
 
   // Create a clipping path
-  const CLIP_X = FRAME_X1 + AVA_RADIUS;
-  const CLIP_Y = AVA_POS_Y + AVA_RADIUS;
+  if (avatar.rounded) {
+    const radius = fitSize / 2;
+    const clipX = imgX + radius;
+    const clipY = imgY + radius;
 
-  doc.circle(CLIP_X, CLIP_Y, AVA_RADIUS).clip();
-  doc.image(person.photo, FRAME_X1, AVA_POS_Y, {
-    fit: [AVA_WIDTH, AVA_WIDTH],
-    align: "center",
-    valign: "center",
+    if (photo.height < photo.width) {
+      ratio = (photo.width / photo.height).toFixed(2);
+      imgWidth = fitSize * ratio;
+      imgHeight = fitSize;
+      imgX -= imgWidth / 2 - radius;
+      orientation = "album";
+    }
+
+    if (photo.width < photo.height) {
+      ratio = (photo.height / photo.width).toFixed(2);
+      imgWidth = fitSize;
+      imgHeight = fitSize * ratio;
+      imgY -= imgHeight / 2 - radius;
+      orientation = "portrait";
+    }
+
+    // doc.circle(clipX, clipY, radius).fill("red");
+    doc.circle(clipX, clipY, radius).clip("nonzero");
+  }
+
+  doc.image(photo.path, imgX, imgY, {
+    fit: [imgWidth, imgHeight],
   });
 }
 // ...................................................................
@@ -245,8 +280,8 @@ function addProjects(doc, template, data, startX = 0, startY = 0, width) {
   let marginY = startY;
   let offs = 0;
 
-  const { textDefault, primaryColor, secondaryColor } = template.data;
-  const { listOffset } = template.data;
+  const { primaryColor, secondaryColor, accentColor } = template.data;
+  const { textDefault, listOffset } = template.data;
   const { fontSize, fontColor } = textDefault;
   const { fontBold, fontNorm } = template;
 
@@ -268,7 +303,7 @@ function addProjects(doc, template, data, startX = 0, startY = 0, width) {
     doc
       .font(fontNorm)
       .fontSize(fontSize - 1)
-      .fillColor("green");
+      .fillColor(accentColor);
     // offs = doc.currentLineHeight(true);
     // doc.lineAnnotation(startX, marginY, DOC_WIDTH, marginY, { color: "aqua" });
 
