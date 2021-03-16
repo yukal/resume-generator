@@ -25,10 +25,12 @@
       "max": 6
     },
     "avatar": {
-      "width": 40,
-      "positionY": 150
+      "fitSize": 40,
+      "positionY": 150,
+      "rounded": true
     },
     "linkColor": "#003398",
+    "accentColor": "#8a6200",
     "primaryColor": "black",
     "secondaryColor": "#202020",
     "contacts": {

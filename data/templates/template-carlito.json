@@ -25,12 +25,14 @@
       "max": 6
     },
     "avatar": {
-      "width": 40,
-      "positionY": 150
+      "fitSize": 70,
+      "positionY": 150,
+      "rounded": false
     },
     "linkColor": "#003398",
+    "accentColor": "teal",
     "primaryColor": "black",
-    "secondaryColor": "#202020",
+    "secondaryColor": "#404040",
     "contacts": {
       "positionY": 102,
       "fontSize": 13
@@ -46,7 +48,7 @@
     },
     "personPosition": {
       "marginTop": 3,
-      "fontSize": 15,
+      "fontSize": 18,
       "fontWeight": "bold",
       "fontColor": "black"
     },
@@ -58,7 +60,7 @@
     "textDefault": {
       "fontSize": 13,
       "fontWeight": "regular",
-      "fontColor": "#202020"
+      "fontColor": "#404040"
     }
   }
 }

@@ -18,17 +18,19 @@
   "fontBold": "Helvetica-Bold",
   "fontNorm": "Helvetica",
   "lineHeight": 1.8,
-  "leftColumnBg": "#f3f3f3",
+  "leftColumnBg": "#edf6ed",
   "data": {
     "listOffset": {
       "min": 1.6,
       "max": 6
     },
     "avatar": {
-      "width": 40,
-      "positionY": 145
+      "fitSize": 40,
+      "positionY": 145,
+      "rounded": true
     },
     "linkColor": "#003398",
+    "accentColor": "green",
     "primaryColor": "black",
     "secondaryColor": "#202020",
     "contacts": {
