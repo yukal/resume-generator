@@ -17,7 +17,7 @@
   "fontAccent": "",
   "fontBold": "data/fonts/noto-sans/NotoSans-Bold.ttf",
   "fontNorm": "data/fonts/noto-sans/NotoSans-Regular.ttf",
-  "lineHeight": 1.8,
+  "lineHeight": 0,
   "leftColumnBg": "#f3f3f3",
   "data": {
     "listOffset": {
