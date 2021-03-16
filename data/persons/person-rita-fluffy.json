@@ -1,28 +1,28 @@
 {
-  "birth": "Greece, Macedonia, July 21st, 1885",
-  "name": "John Doe",
-  "position": "Middle Node.js Developer",
-  "target": "Middle Nodejs",
+  "birth": "Greece, Macedonia, July 21st, 1985",
+  "name": "Rita Fluffy",
+  "position": "Trainy Java Developer",
+  "target": "Trainy Java",
   "photo": {
-    "path": "data/ava/ava-1.png",
-    "width": 465,
-    "height": 465
+    "path": "data/ava/ava-2.png",
+    "width": 400,
+    "height": 200
   },
   "contacts": [
     {
       "name": "Github",
-      "link": "github.com/johndoe",
-      "url": "https://github.com/johndoe"
+      "link": "github.com/ritafluffy",
+      "url": "https://github.com/ritafluffy"
     },
     {
       "name": "Linkedin",
-      "link": "linkedin.com/in/johndoe",
-      "url": "https://www.linkedin.com/in/johndoe"
+      "link": "linkedin.com/in/ritafluffy",
+      "url": "https://www.linkedin.com/in/ritafluffy"
     },
     {
       "name": "Email",
-      "link": "john.doe@email.it",
-      "url": "mailto:john.doe@email.it"
+      "link": "rita.fluffy@email.it",
+      "url": "mailto:rita.fluffy@email.it"
     }
   ],
   "skills": [

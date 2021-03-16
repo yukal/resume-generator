@@ -1,28 +1,28 @@
 {
-  "birth": "Greece, Macedonia, July 21st, 1885",
-  "name": "John Doe",
-  "position": "Middle Node.js Developer",
-  "target": "Middle Nodejs",
+  "birth": "Greece, Macedonia, July 21st, 1985",
+  "name": "Lion King",
+  "position": "Senior Node.js Developer",
+  "target": "Senior Nodejs",
   "photo": {
-    "path": "data/ava/ava-1.png",
-    "width": 465,
-    "height": 465
+    "path": "data/ava/ava-3.jpg",
+    "width": 429,
+    "height": 600
   },
   "contacts": [
     {
       "name": "Github",
-      "link": "github.com/johndoe",
-      "url": "https://github.com/johndoe"
+      "link": "github.com/lionking",
+      "url": "https://github.com/lionking"
     },
     {
       "name": "Linkedin",
-      "link": "linkedin.com/in/johndoe",
-      "url": "https://www.linkedin.com/in/johndoe"
+      "link": "linkedin.com/in/lionking",
+      "url": "https://www.linkedin.com/in/lionking"
     },
     {
       "name": "Email",
-      "link": "john.doe@email.it",
-      "url": "mailto:john.doe@email.it"
+      "link": "lion.king@email.it",
+      "url": "mailto:lion.king@email.it"
     }
   ],
   "skills": [
