@@ -26,7 +26,7 @@
     },
     "avatar": {
       "fitSize": 40,
-      "positionY": 145,
+      "positionY": 50,
       "rounded": true
     },
     "linkColor": "#003398",

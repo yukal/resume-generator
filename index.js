@@ -105,6 +105,67 @@ doc.lineGap(template.lineHeight);
 }
 
 // ...................................................................
+// AVATAR
+{
+  const { photo } = person;
+  const { avatar } = template.data;
+
+  const fitSize = size.mm.toPoints(avatar.fitSize);
+
+  let ratio = 1;
+  let imgWidth = fitSize;
+  let imgHeight = fitSize;
+  let orientation = "square";
+
+  let imgX = FRAME_X1;
+  let imgY = size.mm.toPoints(avatar.positionY);
+
+  if (photo.width > photo.height) {
+    ratio = (photo.width / photo.height).toFixed(2);
+    imgHeight /= ratio;
+    orientation = "album";
+  }
+
+  if (photo.height > photo.width) {
+    ratio = (photo.height / photo.width).toFixed(2);
+    imgWidth /= ratio;
+    orientation = "portrait";
+  }
+
+  // Create a clipping path
+  if (avatar.rounded) {
+    const radius = fitSize / 2;
+    const clipX = imgX + radius;
+    const clipY = imgY + radius;
+
+    if (orientation === "album") {
+      imgWidth = fitSize * ratio;
+      imgHeight = fitSize;
+      imgX -= imgWidth / 2 - radius;
+    }
+
+    if (orientation === "portrait") {
+      imgWidth = fitSize;
+      imgHeight = fitSize * ratio;
+      imgY -= imgHeight / 2 - radius;
+    }
+
+    doc.save();
+
+    // doc.circle(clipX, clipY, radius).fill("red");
+    doc.circle(clipX, clipY, radius).clip("nonzero");
+  }
+
+  doc.image(photo.path, imgX, imgY, {
+    fit: [imgWidth, imgHeight],
+  });
+
+  if (avatar.rounded) {
+    doc.restore();
+  }
+}
+
+// ...................................................................
 // CONTACTS
 {
   POS_Y = size.mm.toPoints(template.data.contacts.positionY);
@@ -161,54 +222,6 @@ doc.lineGap(template.lineHeight);
   // doc.text(textVersion, POS_X, POS_Y, { lineBreak: false });
   doc.text(textVersion, POS_X, FRAME_Y2, { lineBreak: false });
 }
-
-// ...................................................................
-// AVATAR
-{
-  const { photo } = person;
-  const { avatar } = template.data;
-
-  const fitSize = size.mm.toPoints(avatar.fitSize);
-
-  let ratio = 1;
-  let imgWidth = fitSize;
-  let imgHeight = fitSize;
-  let orientation = "square";
-
-  let imgX = FRAME_X1;
-  let imgY = avatar.positionY;
-
-  // Create a clipping path
-  if (avatar.rounded) {
-    const radius = fitSize / 2;
-    const clipX = imgX + radius;
-    const clipY = imgY + radius;
-
-    if (photo.height < photo.width) {
-      ratio = (photo.width / photo.height).toFixed(2);
-      imgWidth = fitSize * ratio;
-      imgHeight = fitSize;
-      imgX -= imgWidth / 2 - radius;
-      orientation = "album";
-    }
-
-    if (photo.width < photo.height) {
-      ratio = (photo.height / photo.width).toFixed(2);
-      imgWidth = fitSize;
-      imgHeight = fitSize * ratio;
-      imgY -= imgHeight / 2 - radius;
-      orientation = "portrait";
-    }
-
-    // doc.circle(clipX, clipY, radius).fill("red");
-    doc.circle(clipX, clipY, radius).clip("nonzero");
-  }
-
-  doc.image(photo.path, imgX, imgY, {
-    fit: [imgWidth, imgHeight],
-  });
-}
-// ...................................................................
 
 doc.end();
 
