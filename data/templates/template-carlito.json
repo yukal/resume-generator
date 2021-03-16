@@ -15,10 +15,10 @@
     }
   },
   "fontAccent": "",
-  "fontBold": "data/fonts/noto-sans/NotoSans-Bold.ttf",
-  "fontNorm": "data/fonts/noto-sans/NotoSans-Regular.ttf",
-  "lineHeight": 0,
-  "leftColumnBg": "#e6f0f5",
+  "fontBold": "data/fonts/carlito/Carlito-Bold.ttf",
+  "fontNorm": "data/fonts/carlito/Carlito-Regular.ttf",
+  "lineHeight": 0.8,
+  "leftColumnBg": "#ffffff",
   "data": {
     "listOffset": {
       "min": 1.6,
@@ -33,11 +33,11 @@
     "secondaryColor": "#202020",
     "contacts": {
       "positionY": 102,
-      "fontSize": 12
+      "fontSize": 13
     },
     "skills": {
       "positionY": 134,
-      "fontSize": 12
+      "fontSize": 13
     },
     "personName": {
       "fontSize": 21,
@@ -53,10 +53,10 @@
     "textProjects": {
       "text": "The Projects",
       "fontColor": "#202020",
-      "fontSize": 12
+      "fontSize": 13
     },
     "textDefault": {
-      "fontSize": 12,
+      "fontSize": 13,
       "fontWeight": "regular",
       "fontColor": "#202020"
     }
